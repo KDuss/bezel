@@ -10,4 +10,23 @@
   * [Use another database](server_part.md#use-another-database)
 * [MongoDB](database_part.md)
   * [Configure MongoDB](database_part.md#configure-mongoDB)
-*[JSDoc](jsdoc/jsdoc.md)
+*JSDoc
+  * Client
+  * [Docs](jsdoc/doc.md)
+  * [Interfaces](jsdoc/interface.md)
+  * [MainController](jsdoc/mainController.md)
+  * [ModuleProjector](jsdoc/moduleProjector.md)
+  * [Observable](jsdoc/observable.md)
+  * [PresentationModel](jsdoc/presentationModel.md)
+  * [RegularFacet](jsdoc/regularFacet.md)
+  * [service](jsdoc/service.md)
+  * [SpecificModuelProjector](jsdoc/specificModuelProjector.md)
+  * [TableFacet](tableFacet/mainController.md)
+  * [Tree](jsdoc/tree.md)
+  * [Utils](jsdoc/util.md)
+  * [MainController](jsdoc/mainController.md)
+  * Server
+  * [MongoDB](jsdoc/mongoDB.md)
+  * [Provider](jsdoc/provider.md)
+
+ 
