@@ -1,0 +1,11 @@
+
+# JetBrains
+.idea/
+*.iml
+
+
+code/node_modules/
+apidoc/
+code/lib/
+
+package-lock.json

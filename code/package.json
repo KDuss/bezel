@@ -1,0 +1,24 @@
+{
+  "name": "bezel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/server/concreteDB/provider.js",
+  "scripts": {
+    "run": "cd src/server && node server.mjs",
+    "start": "cd src/server && node --experimental-specifier-resolution=node server",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src/**"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "api-doc": "^4.0.3",
+    "express": "^4.17.1",
+    "mongodb": "^3.5.9"
+  },
+  "devDependencies": {
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.21.2"
+  }
+}

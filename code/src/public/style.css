@@ -1,0 +1,595 @@
+/* ---------------------
+        Whole Page
+ --------------------- */
+:root {
+    margin: 0;
+    padding: 0;
+
+    font-family: sans-serif;
+    white-space: nowrap;
+
+    --primary-color: #11395F;
+    --font-color-on-primary: white;
+    --table-height: 40em;
+    --scrollbar-background-color: #F5F5F5;
+    --scrollbar-thumb-color: var(--primary-color);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    overflow-y: scroll;
+}
+
+main {
+    display: grid;
+    grid-template-rows: auto 5fr;
+    margin: 0 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* ---------------------
+       Header
+--------------------- */
+#facet-module-list {
+    box-sizing: border-box;
+    position: fixed;
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    align-items: center;
+
+    padding: 1em;
+    width: 100%;
+    background: var(--primary-color);
+    z-index: 1;
+}
+
+.available-modules-title {
+    margin: 0 1em 0 0;
+    padding: 0;
+    color: white;
+}
+
+.logo {
+    width: 2rem;
+    height: 2rem;
+    background: url("/logo.png");
+}
+
+.logo-rotate {
+    animation: spin .75s linear 0.1s infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+.app-name {
+    color: white;
+    margin: 0 1rem 0 0;
+
+    font-weight: normal;
+}
+
+/* ---------------------
+        Testing
+ --------------------- */
+#test-results {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    border-top: 10px solid var(--primary-color);
+}
+
+#results {
+    grid-column: 1 / 3;
+}
+
+#test-title {
+    grid-column: 1 / 3;
+    margin-bottom: 0;
+}
+
+/* ---------------------
+        Reset Button
+ --------------------- */
+#facet-modules {
+    margin-top: 4rem;
+}
+
+.reset-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    color: var(--primary-color);
+    text-align: left;
+    margin-right: .5rem;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.reset-btn:hover {
+    text-decoration: underline;
+}
+
+.reset-module-btn {
+    padding: 0 .2rem;
+}
+
+/* ---------------------
+    Modules
+ --------------------- */
+.reset-all-btn {
+    margin: .6rem 0 .4rem 0;
+    color: red;
+}
+.module-drag-container {
+    display: flex;
+    overflow: auto;
+}
+
+/* ---------------------
+    Drag and Drop Facet
+ --------------------- */
+.facet-drop-area {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--primary-color);
+
+    padding: 1rem;
+    margin-top: 1rem;
+
+    overflow: auto;
+}
+
+.facet-drag-container {
+    display: flex;
+    overflow: auto;
+}
+
+.draggable {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    margin-right: .5rem;
+    padding: 0.4em 0.8rem;
+    background-color: white;
+
+    cursor: move;
+    border: 1px solid black;
+
+    align-items: center;
+}
+
+.draggable:last-child {
+    margin-right: 0;
+}
+
+.draggable.dragging {
+    opacity: .2;
+}
+
+.activated {
+    opacity: .2;
+    cursor: auto;
+    user-select: none;
+}
+
+.drag-sort-active {
+    opacity: .2;
+}
+
+/* ---------------------
+        Facet View
+ --------------------- */
+.facet-icon {
+    width: 1.5em;
+    height: 1.5em;
+    border: none;
+}
+
+.facet-position {
+    margin: 0 .5rem 0 0;
+    background: none;
+    border: 1px solid white;
+    border-top: 1rem solid white;
+
+    min-width: 300px;
+}
+
+.container-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    text-align: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: white;
+    margin: .4rem .4rem;
+}
+.move-btn {
+    background: none;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+    cursor: pointer;
+
+    position: relative;
+    bottom: .1rem;
+}
+.move-btn:hover {
+    background: white;
+    color: var(--primary-color);
+}
+
+.module {
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    width: calc(100vw - 2rem - 16px);
+}
+
+.module .and-btn,
+.module .or-btn {
+    visibility: hidden;
+    width: 0;
+}
+
+.facets {
+    overflow: auto;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.facet {
+    padding: .8rem;
+    background-color: white;
+    margin-bottom: 1em;
+}
+
+/* Close button based on: https://stackoverflow.com/a/47196589 */
+.remove-facet-btn {
+    position: relative;
+    width: 28px;
+    height: 28px;
+    opacity: 0.6;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: 0;
+}
+.remove-facet-btn:hover {
+    opacity: 1;
+}
+.remove-facet-btn:before, .remove-facet-btn:after {
+    position: absolute;
+    left: 15px;
+    top: 0;
+    content: ' ';
+    height: 26px;
+    width: 3px;
+    background-color: red;
+}
+.remove-facet-btn:before {
+    transform: rotate(45deg);
+}
+.remove-facet-btn:after {
+    transform: rotate(-45deg);
+}
+
+
+
+.facet-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    white-space: normal;
+}
+
+.facet-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+
+    align-items: center;
+    margin-bottom: .5rem;
+}
+
+.remove-module-btn {
+    background: none;
+    border: none;
+    padding: 0 .2rem;
+    color: red;
+    cursor: pointer;
+}
+
+.remove-module-btn:hover {
+    text-decoration: underline;
+}
+
+/* ---------------------
+       Hierarchy View
+--------------------- */
+.sublist {
+    grid-column: 2/3;
+}
+
+.facet > .sublist {
+    max-height: 350px;
+    overflow: auto;
+}
+
+.focus-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.expander {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+
+    align-items: center;
+    margin-left: .4rem;
+}
+
+.tree-leaf {
+    display: grid;
+    grid-template-columns: auto 1fr;
+
+    align-items: center;
+    padding: .3rem 0 .3rem .3rem;
+}
+
+.tree-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+
+    align-items: center;
+
+    padding: .3rem 0 .3rem .3rem;
+}
+
+li label {
+    cursor: pointer;
+}
+
+.tree-item > .expander::before {
+    content: '';
+    display: inline-block;
+    position: relative;
+
+    width: .7em;
+    height: .7em;
+    background: var(--primary-color);
+    --arrow-down: polygon(0 0, 100% 50%, 0% 100%);
+    -webkit-clip-path: var(--arrow-down);
+    clip-path: var(--arrow-down);
+
+    transition: transform .3s;
+}
+
+.tree-item-open > .expander::before {
+    transform: rotate(90deg);
+    transition: transform 0.3s;
+}
+
+.tree-item > ul {
+    display: none;
+}
+
+.tree-item-open > ul {
+    display: block;
+}
+
+.focus {
+    margin-left: .5rem;
+    white-space: normal;
+}
+
+.focus-count {
+    margin-right: .5rem;
+}
+
+.focus-selected {
+    font-weight: bold;
+}
+
+/* ---------------------
+       Table View
+--------------------- */
+.data-view {
+    display: grid;
+}
+
+.table-container {
+    overflow: scroll;
+    max-height: var(--table-height);
+
+    margin-top: .8rem;
+}
+
+.data-table {
+    white-space: nowrap;
+    border-collapse: collapse;
+
+    border-bottom: 1px double var(--primary-color);
+}
+
+.data-table tbody tr {
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+}
+.data-table tbody tr:last-child {
+    border-bottom: 1px double black;
+}
+
+.data-table tbody tr:hover {
+    cursor: pointer;
+    border-top: 2px double var(--primary-color);
+    border-bottom: 2px double var(--primary-color);
+}
+
+.data-table td {
+    padding: .3rem .4rem;
+    border: 1px solid var(--primary-color);
+    border-color: transparent black transparent black;
+}
+
+.data-table th {
+    position: sticky;
+    top: 0;
+
+    text-align: left;
+    padding: .8rem .4rem .4rem .4rem;
+    background: var(--primary-color);
+    color: white;
+}
+
+.table-row-checked {
+    text-shadow: 1px 0 0 black;
+}
+
+.count, .selection-count {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* ---------------------
+       Drop target indication
+--------------------- */
+.drop-target {
+    display: grid;
+    width: 100%;
+    min-width: 200px;
+    min-height: 200px;
+
+    align-content: center;
+    justify-content: center;
+
+    border: .1em dashed black;
+    font-size: .8rem;
+}
+
+.drop-target-hover {
+    border-color: rgb(225, 225, 225);
+    color: black;
+    background: rgb(225, 225, 225);
+    opacity: .5;
+}
+
+.facet-drop-target {
+    color: white;
+    border-color: rgb(225, 225, 225);
+}
+
+.facet-or-drop-target {
+    min-height: 80px;
+    width: calc(100%);
+    margin: 0 0 .5rem 0;
+    border-left: none;
+    border-right: none;
+
+    color: white;
+    border-color: rgb(225, 225, 225);
+}
+
+.logical-operator {
+    font-size: 3em;
+    text-align: center;
+    pointer-events: none;
+}
+.drop-description {
+    pointer-events: none;
+}
+
+/* ---------------------
+       Tooltip
+--------------------- */
+.tooltip {
+    display: inline-block;
+    position: relative;
+    width: 1em;
+    height: 1em;
+    font-size: .8em;
+
+    background-color: white;
+    color: var(--primary-color);
+
+    border-radius: 50%;
+    border: 2px solid white;
+    text-align: center;
+
+    user-select: none;
+}
+
+.tooltip:hover {
+    background: var(--primary-color);
+    color: white;
+
+}
+
+/* Text element */
+.tooltip::after {
+    position: absolute;
+    left: 50%;
+    opacity: 0;
+
+    content: attr(data-tooltip);
+    top: -8px;
+    width: 200px;
+
+    white-space: normal;
+    padding: .4em;
+    font-size: .8rem;
+    font-weight: normal;
+    background-color: rgb(70, 70, 70);
+    border-radius: .4em;
+    pointer-events: none;
+
+    transform: translate3d(-50%, 2.5em, 0);
+}
+
+.tooltip:hover::after {
+    opacity: 1;
+}
+
+/* ---------------------
+        Scrollbar
+ --------------------- */
+/*Scrollbar styling Firefox*/
+*{
+    scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-background-color);
+
+}
+
+/*Scroll bar Chrome, Edge, Safari*/
+::-webkit-scrollbar-track
+{
+    background-color: var(--scrollbar-background-color);
+}
+
+::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: var(--scrollbar-background-color);
+}
+
+::-webkit-scrollbar-thumb
+{
+    background-color: var(--scrollbar-thumb-color);
+}

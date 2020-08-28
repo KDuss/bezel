@@ -1,0 +1,25 @@
+{
+  "extends": "airbnb-base",
+  "rules": {
+    "func-names": ["error", "never"],
+    "max-len": ["error", { "ignoreComments": true, "ignoreTemplateLiterals": true,"ignorePattern": "s*import" }],
+    "arrow-parens": ["error", "as-needed"],
+    "indent": ["error", 4, {"FunctionExpression": {"parameters": "first"}}],
+    "no-return-assign": ["error","except-parens"],
+    "no-underscore-dangle": ["error", {"allow":  ["_id"]}],
+    "no-unused-vars": ["error", { "argsIgnorePattern": "_" }],
+    "no-param-reassign": ["error", { "props": false }],
+    "no-plusplus": ["error",{ "allowForLoopAfterthoughts": true }],
+    "import/extensions": ["error", "always"],
+    "linebreak-style": ["error", "windows"],
+    "no-console": ["error", {"allow":["warn", "error", "log", "time", "timeEnd", "info"]}]
+  },
+  "globals": {
+    "window": true,
+    "document": true,
+    "MutationObserver": true,
+    "fetch": true,
+    "IntersectionObserver": true
+  },
+  "ignorePatterns": ["*.ico", "*.css", "*.html", "*.json", "*.png"]
+}
