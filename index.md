@@ -10,3 +10,4 @@
   * [Use another database](server_part.md#use-another-database)
 * [MongoDB](database_part.md)
   * [Configure MongoDB](database_part.md#configure-mongoDB)
+*[JSDoc](jsdoc/jsdoc.md)
