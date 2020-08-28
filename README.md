@@ -1,6 +1,6 @@
 ![alt logo](/resources/bezel-logo.png)
 
-# Bezel
+
 
 Bezel is a web application that allows users to browse through datasets using faceted search.
 
@@ -12,7 +12,7 @@ For the full documentation, visit the **[developer documentation](https://kduss.
 
 * [MongoDB](https://www.mongodb.com/download-center/community)
 
-*  version >= 14 
+* [Node](https://nodejs.org/en/) version >= 14 
 * [NPM](https://www.npmjs.com/)
 
 Clone the project and install the dependencies:
