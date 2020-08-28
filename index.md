@@ -29,5 +29,6 @@ Created to use and expand in future versions.
 * JSDoc Server
   * [MongoDB](jsdoc/mongoDB.md)
   * [Provider](jsdoc/provider.md)
+* [API Doc](apidoc/index.html)
 
  
