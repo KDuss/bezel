@@ -29,7 +29,7 @@ To trigger the tests you have to run the application and direct to:
 Default domain for this project is localhost:8000
 
 
-For full documentation, visit the **[developer documentation](https://www.algolia.com/doc/api-client/getting-started/install/javascript/)**.
+For full documentation, visit the **[developer documentation](https://kduss.github.io/bezel/)**.
 
 
 
