@@ -39,4 +39,4 @@ function useNewDB() {
 useNewDB();
 ```
 
-**Important**:And don't forget to adapt the config file.
+**Important**: Don't forget to adapt the config file.
