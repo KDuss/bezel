@@ -1,8 +1,8 @@
-#MongoDB
+# MongoDB
 
 MongoDB is used ad default database in this project.
 
-## MongoDB config
+## Configure MongoDB
 
 If you want you can create a new database instance for the new dataset.
 Therefore you have first to run mongodb:
