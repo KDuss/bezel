@@ -10,8 +10,7 @@
   * [Use another database](server_part.md#use-another-database)
 * [MongoDB](database_part.md)
   * [Configure MongoDB](database_part.md#configure-mongoDB)
-*JSDoc
-  * Client
+* JSDoc Client
   * [Docs](jsdoc/doc.md)
   * [Interfaces](jsdoc/interface.md)
   * [MainController](jsdoc/mainController.md)
@@ -25,7 +24,7 @@
   * [Tree](jsdoc/tree.md)
   * [Utils](jsdoc/util.md)
   * [MainController](jsdoc/mainController.md)
-  * Server
+* JSDoc Server
   * [MongoDB](jsdoc/mongoDB.md)
   * [Provider](jsdoc/provider.md)
 
