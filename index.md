@@ -1,6 +1,5 @@
 # Bezel
-You are currently reading the documentation of Bezel v1, a web based facet search tool.
-Created to use and expand in future versions.
+You are currently reading the documentation of Bezel v1, a web-based tool for faceted search. Created to use and expand in future versions.
 
 # Table of content
 * [Client](client_part.md)

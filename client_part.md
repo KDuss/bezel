@@ -2,7 +2,7 @@
 
 #### Add New Module
 
-1. Add a new package ``sampleFacet`` to [code/src/public](code/src/public).
+1. Add a new package ``sampleFacet`` to ``src/public``.
 2. Within the package, create the files ``sampleModule.mjs`` for the module controller and ``sampleModuleProjector.mjs`` for the view .
 3. Implement the following interface for your new module.
 
@@ -20,7 +20,7 @@
  */
 ```
 
-4. Add the ``sampleModuleProjector`` to ``specificModuleProjector`` in [specificModuleProjector.mjs](code/src/public/specificModuleProjector.mjs).
+4. Add the ``sampleModuleProjector`` to ``specificModuleProjector`` in ``specificModuleProjector.mjs``.
 
 ```javascript
 if (module.type === 'table') {
@@ -30,7 +30,7 @@ if (module.type === 'table') {
 }
 ```
 
-5. In [init.mjs](code/src/public/init.mjs), initialize the new module and add it to the ``mainController``.
+5. In ``init.mjs``, initialize the new module and add it to the ``mainController``.
 
 ```javascript
 const mainController = MainController();
@@ -71,7 +71,7 @@ const tableModuleProjector = (mainController, module, root) => {
 };
 ```
 
-*Remark: You can also implement ``tableFacetProjector`` in a different location and simply change the import in [tableModuleProjector.mjs](code/src/public/tableFacet/tableModuleProjector.mjs).*
+*Remark: You can also implement ``tableFacetProjector`` in a different location and simply change the import in ``tableModuleProjector.mjs``.*
 
 #### Add New Tests
 
@@ -107,7 +107,7 @@ assert.true(testResult);
 await sleep(timeInMillis);
 ```
 
-4. Add test suite to the list of tests to be executed in [allTests.mjs](code/src/public/test/allTests.mjs).
+4. Add test suite to the list of tests to be executed in ``allTests.mjs``.
 
 ```javascript
 // For unit tests
