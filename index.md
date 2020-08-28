@@ -1,6 +1,8 @@
-# Introduction
+# Bezel
+You are currently reading the documentation of Bezel v1, a web based facet search tool.
+Created to use and expand in future versions.
 
-## Table of content
+# Table of content
 * [Client](client_part.md)
   * [Add New Module](client_part.md#add-new-module)
   * [Add New Facet](client_part.md#add-new-facet)
