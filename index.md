@@ -1,6 +1,8 @@
-# Introduction
+# Bezel
+You are currently reading the documentation of Bezel v1, a web based facet search tool.
+Created to use and expand in future versions.
 
-## Table of content
+# Table of content
 * [Client](client_part.md)
   * [Add New Module](client_part.md#add-new-module)
   * [Add New Facet](client_part.md#add-new-facet)
@@ -10,3 +12,23 @@
   * [Use another database](server_part.md#use-another-database)
 * [MongoDB](database_part.md)
   * [Configure MongoDB](database_part.md#configure-mongoDB)
+* JSDoc Client
+  * [Docs](jsdoc/doc.md)
+  * [Interfaces](jsdoc/interface.md)
+  * [MainController](jsdoc/mainController.md)
+  * [ModuleProjector](jsdoc/moduleProjector.md)
+  * [Observable](jsdoc/observable.md)
+  * [PresentationModel](jsdoc/presentationModel.md)
+  * [RegularFacet](jsdoc/regularFacet.md)
+  * [service](jsdoc/service.md)
+  * [SpecificModuelProjector](jsdoc/specificModuelProjector.md)
+  * [TableFacet](tableFacet/mainController.md)
+  * [Tree](jsdoc/tree.md)
+  * [Utils](jsdoc/util.md)
+  * [MainController](jsdoc/mainController.md)
+* JSDoc Server
+  * [MongoDB](jsdoc/mongoDB.md)
+  * [Provider](jsdoc/provider.md)
+* [API Doc](apidoc/index.html)
+
+ 
