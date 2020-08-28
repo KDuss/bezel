@@ -23,17 +23,30 @@ npm install
 
 ### Start application
 Run the database:
+
  ```bash
-   mongod --dbpath <path database store>
+mongod --dbpath <path database store>
  ```
- Then start application:
+Import the dataset into your MongoDB ([see documentation](https://kduss.github.io/bezel/database_part.html#configure-mongoDB)). Once imported, add the correct database and collection names to the config file [here](code/src/public/config.mjs).
+
+
+
+Then run the application:
+
  ```bash
-   npm run run
+npm run run
  ```
+By default it is now available on:
+
+```
+http://localhost:8000/
+```
+
 ### Testing
+
 To trigger the tests you have to run the application and direct to:
  ```
-   {domain}/test
+{domain}/test
  ```
 Default domain for this project is localhost:8000
 
